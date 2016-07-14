@@ -12,6 +12,3 @@ image(base);
 plot.show()
 image(many(truth).mask(dims=data.shape[1:], cmap='rainbow', stroke='black', base=base));
 plot.show()
-print data
-print series
-print truth
