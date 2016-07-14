@@ -1,2 +1,2 @@
-from calciumdata import calcium_data
+from calciumimaging import calcium_imaging
 

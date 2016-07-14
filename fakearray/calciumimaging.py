@@ -5,7 +5,7 @@ from skimage.draw import circle
 from thunder.images import fromarray, fromlist, Images
 
 
-def calcium_data(shape=(100, 200), n=5, t=100, sd=3, noise=0.1, seed=None, engine=None, withparams=False):
+def calcium_imaging(shape=(100, 200), n=5, t=100, sd=3, noise=0.1, seed=None, engine=None, withparams=False):
     """
     Generate random gaussian source data.
 

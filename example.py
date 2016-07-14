@@ -4,9 +4,9 @@ from showit import image
 import matplotlib.pyplot as plot
 from regional import many
 
-from fakearray import calcium_data
+from fakearray import calcium_imaging
 
-data, series, truth = calcium_data(shape=(100,300), n=5, t=50, seed=42, noise=0.5, withparams=True)
+data, series, truth = calcium_imaging(shape=(100,300), n=5, t=50, seed=42, noise=0.5, withparams=True)
 base = data.mean().toarray()
 image(base);
 plot.show()
