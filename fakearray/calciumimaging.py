@@ -2,7 +2,6 @@ from numpy import asarray, array, random, clip, zeros, max, inf
 from scipy.ndimage.filters import gaussian_filter, gaussian_filter1d
 from skimage.draw import circle
 
-from thunder.images import fromarray, fromlist, Images
 
 
 def calcium_imaging(shape=(100, 200), n=5, t=100, sd=3, noise=0.1, seed=None, engine=None, withparams=False):
@@ -70,7 +69,7 @@ def calcium_imaging(shape=(100, 200), n=5, t=100, sd=3, noise=0.1, seed=None, en
 
     model = [point_to_circle(c, r) for c in centers]
 
-    data = fromlist(frames, engine=engine).astype('float')
+    data = asarray(frames)
     if withparams is True:
         return data, series, model
     else:
