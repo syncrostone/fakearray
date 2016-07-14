@@ -9,13 +9,13 @@ Small package for generating different kinds of structured array data, for scien
 ```python
 import fakearray as fa 
 
-images = fa.calcium_imaging(k=5)
+images = fa.calcium_data(k=5)
 mat = fa.low_rank(k=5, n=100)
 ```
 
 # current data types
 
-- `calcium_imaging`
+- `calcium_data`
 
 # planned additions
 
