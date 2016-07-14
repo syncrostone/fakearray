@@ -1,3 +1,4 @@
+import pytest
 from fakearray import calcium_imaging
 
 def test_calcium_imaging():
