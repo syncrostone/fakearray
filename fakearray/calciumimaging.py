@@ -35,6 +35,18 @@ def calcium_imaging(shape=(100, 200), n=5, t=100, sd=3, noise=0.1, seed=None, en
 
     withparams : bool, optionla, default = False
         If True, returns generating parameters along with data.
+
+
+    Returns
+    -------
+    data : numpy array
+        (t,x,y) array
+
+    series : numpy array, optional
+        (n,t) array
+    
+    model : list, optional
+        [n lists [list of [x,y] coordinates]
     """
 
     random.seed(seed)
@@ -68,6 +80,7 @@ def calcium_imaging(shape=(100, 200), n=5, t=100, sd=3, noise=0.1, seed=None, en
     r = round(sd * 1.5)
 
     model = [point_to_circle(c, r) for c in centers]
+    model = [[[coord[0], coord[1]] for coord in neuron if coord[0] in range(0,shape[0]) and coord[1] in range(0,shape[1]) ]for neuron in model]
 
     data = asarray(frames)
     if withparams is True:
